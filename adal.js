@@ -1,19 +1,15 @@
-let pizza = {
-	price: [1990, 2150, 2300],
-	size: ['stór', 'miðlungs', 'lítil'],
-	toppings: ['pepperoni', 'skinka', 'ostur', 'beikon'],
-	pizzaeitt: function() {
-		document.write('Margherita: Stærð: ' + this.size[2] + ' | Álegg: ' + this.toppings[2] + ' | Verð: ' + this.price[0] + ' <br />')
-	},
-	pizzatvo: function() {
-		document.write('Meatlover\'s: Stærð: ' + this.size[0] + ' | Álegg: ' + this.toppings[0] + ', ' + this.toppings[1] + ', ' + this.toppings[3] + ' | Verð: ' + this.price[2] + '')
-	}
-};
+function Pizza(name, verð, stærð, álegg) {
+	this.name = 'sveppapizza';
+	this.verð = 1000;
+	this.stærð = 'lítil';
+	this.álegg = 'sveppir';
+}
+var pizzaeitt = new pizza('Margherita', 1990, 'miðlungs', 'ostur');
+var pizzatvö = new pizza('Kjötveisla', 2500, 'stór', 'hakk, pepperoni & skinka');
 
-
-var piza1 = document.getElementById("uno");
-var eitt = pizza.pizzaeitt();
-piza1.textContent = eitt;
+var pizza1 = pizzaeitt.name + ': Verð: ' + pizzaeitt.verð + ' Stærð: ' + pizzaeitt.stærð + ' Álegg: ' + pizzaeitt.álegg;
+var eitt = document.getElementById("uno");
+eitt.textContent = pizzaeitt;
 
 var piza2 = document.getElementById("dos");
 var tvo = pizza.pizzatvo();
